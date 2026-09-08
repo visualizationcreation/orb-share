@@ -1,18 +1,16 @@
-## ORB submission
+## Maintainer catalogue or site update
 
-Title:
-Live ORB URL:
-Source repository and full commit SHA:
-What will a visitor learn or explore?
+Contributor? Use https://visualizationcreation.github.io/orb-share/#submit to share a link or file. A pull request is not required.
 
-## Creator checklist
+For an approved catalogue entry:
+- Intake issue URL:
+- Reviewed file hash / source revision:
+- Owner approval reference and exact approved edition:
+- Creator credit and permission:
+- Verified live ORB URL:
 
-- [ ] I created this ORB or have permission to submit it; I explain any organization/repository ownership difference.
-- [ ] I changed only my listing in `orbs.json`, preserved existing entries and checked valid JSON.
-- [ ] The live page works, opens to the submitted edition and matches the source revision.
-- [ ] I checked compass navigation, readable sources, home/continuation and mobile layout.
-- [ ] Claims, uncertainty and media credits are clear; I have permission to share included assets.
-- [ ] Audio/video flags describe working published media, not planned production.
-- [ ] I understand this remains pending until @visualizationcreation reviews, approves and merges it.
+- [ ] The owner explicitly approved this edition.
+- [ ] The deployed ORB matches the reviewed files and credit.
+- [ ] The trusted catalogue validator passes and existing entries are preserved.
 
-Review notes / known limitations:
+For a workflow/site change, describe the behavior and verification instead.

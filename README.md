@@ -1,25 +1,25 @@
 # ORB Share
 
-A place for anyone with a GitHub account to submit an ORB for the community section of the [ORB Archive](https://visualizationcreation.github.io/orb-archive/#share).
+Create with the ORB Skill. Submit a link or file. The owner reviews; the assistant handles publication after approval.
 
-**[Create and share your ORB — walkthrough](https://visualizationcreation.github.io/orb-share/)** · [Submit a listing](https://github.com/visualizationcreation/orb-share/edit/main/orbs.json) · [Review queue](https://github.com/visualizationcreation/orb-share/pulls)
+**[Share this ORB](https://visualizationcreation.github.io/orb-share/#submit)** · [Submission queue](https://github.com/visualizationcreation/orb-share/issues) · [Owner workflow](REVIEWING.md)
 
-1. Create an ORB and verify its readings, compass, sources and working controls.
-2. Publish it in your own public GitHub repository using GitHub Pages.
-3. Generate a listing using the walkthrough. Fork this repository, add that object to the `orbs` array in `orbs.json`, and open a pull request against this repository's `main` branch.
-4. `@visualizationcreation` reviews the submission, requests changes if needed, and approves and merges accepted work.
-5. GitHub Pages publishes the approved catalogue. The archive's community section reads it automatically after deployment. An open PR is never featured.
+Contributors use the ORB Skill as described in the [field guide](https://visualizationcreation.github.io/the-orb-skill/) or the [published ORB prompt](https://visualizationcreation.github.io/orbbasic/) in their own AI workspace. Submissions must preserve the shared ORB format. Original topics and perspectives help grow the collection. Contributors use their own tools and generation allowance; no AI credentials or computer-control permissions are requested.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the complete browser-only steps and [REVIEWING.md](REVIEWING.md) for owner instructions.
+## Simple intake
 
-## What this repository contains
+1. Create and check a finished ORB Web artifact.
+2. On the Share page, enter the title, creator credit, short summary and live/download link; alternatively choose to attach an HTML/ZIP on GitHub.
+3. Confirm ORB format, permission to host with credit and public submission. Open the prefilled GitHub issue, attach any files, and submit. A GitHub account is required; a repository, hosting, commit SHA, JSON editing and fork are not.
+4. The owner asks their assistant to review the current intake. The assistant prepares file/format/evidence checks and a preview. The owner decides. Only explicit approval of the reviewed edition authorizes publication.
+5. After approval, the assistant handles repository/files, hosting if needed, attribution and the approved archive listing. Submission never automatically features an ORB.
 
-This repository hosts the public walkthrough and the **approved directory listings**. Creators keep their ORB's HTML and media in their own repositories. We link to their live sites and retain a source commit for the reviewed edition. A listing is not a transfer of ownership or a license to reuse a creator's work. The creator's own repository should explain its license and media credits.
+Submissions and attachments are public. GitHub accepts HTML and ZIP attachments up to 25 MB each; use a public download link for larger packages. Keep index.html and required assets together. See [attachment instructions](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files).
 
-`orbs.json` begins empty; it contains no demonstration or pending submissions. To validate a proposed catalogue, run `node validate.cjs` (Node.js required only for this optional local check). Validation is not an automated review and does not approve content. Do not run a contributor's scripts to review a listing.
+## Repository internals
 
-## Publishing and approval gate
+Issues are intake. The root orbs.json remains the approved catalogue, managed by the owner/assistant after approval; the archive never consumes pending issue bodies. validate.cjs checks catalogue data, not content quality or owner approval. The existing submission-template.json and pull_request_template.md are for maintainer catalogue work, not required contributor steps.
 
-GitHub Pages publishes `main` from `/ (root)` with `.nojekyll`. The archive fetches `https://visualizationcreation.github.io/orb-share/orbs.json`; it never reads forks, PR branches, issue bodies or preview deployments. The root `CODEOWNERS` assigns every file to `@visualizationcreation`. Protect `main` with required pull requests, one approval, required Code Owner review and dismissal of stale approvals. Keep auto-merge off. Owner/admin bypass remains available for deliberate maintenance; outside contributors have no direct write access.
+Pages publishes main/root with .nojekyll. CODEOWNERS assigns every path to @visualizationcreation. main has required PR, one approval, Code Owner review, stale-approval dismissal and conversation resolution; the owner's administrative maintenance override remains available. Do not weaken these protections or give contributors write access. No automatic issue-to-publishing workflow or ongoing monitor is installed.
 
-For edits to the workflow itself, use a separate PR from listing submissions. Preserve CODEOWNERS, branch protection and the deployment source. New content changes require renewed review. Creator-hosted sites may change after review; the listing's immutable source link identifies the reviewed revision. Update its revision through another PR for a material update. The owner can remove a listing by deleting its object and publishing the catalogue again.
+Each approved edition retains creator credit and source/media provenance. Review records identify the issue, exact attachment hash or source revision, approval and published destination. A material update needs renewed review. See CONTRIBUTING.md and REVIEWING.md for details.
