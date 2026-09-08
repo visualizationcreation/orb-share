@@ -1,0 +1,11 @@
+{
+  "id": "YOUR-USERNAME-your-orb",
+  "title": "Your ORB title",
+  "creator": "YOUR-USERNAME",
+  "description": "What will someone explore, learn or make with this ORB?",
+  "url": "https://YOUR-USERNAME.github.io/your-orb/",
+  "repository": "https://github.com/YOUR-USERNAME/your-orb",
+  "revision": "REPLACE_WITH_THE_FULL_40_CHARACTER_COMMIT_SHA",
+  "tags": ["education"],
+  "media": {"audio": false, "video": false}
+}
