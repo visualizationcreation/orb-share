@@ -1,0 +1,223 @@
+Create an ORB File for ORB Share from our exploration.
+
+First develop the subject, then package it. Spend your authoring effort on substantive explanations, meaningful relationships, well-supported claims, useful questions and coherent prose. Research specific, current or uncertain claims with your available tools. Do not generate HTML, CSS, JavaScript, globe coordinates or interface code. This format does not guarantee deeper reasoning; the quality comes from the exploration and evidence.
+
+Use our chosen topic, audience and public creator credit. Ask for public credit if it is missing; do not infer a personal name. Preserve existing point IDs, readings, sources and confirmed model/skill provenance. Improve content only when asked. If the source is incomplete, label the missing research rather than inventing it. Favor a manageable set of rich points over a large set of shallow summaries.
+
+Author each point's six directions independently of the spiral reading order. UP broadens; DOWN deepens explanation or scale; LEFT/RIGHT are adjacent facets; FORWARD/BACKWARD follow an explicitly named thread. Use a meaningful destination label. Record a specific unavailable reason when a direction has no authored destination. History back belongs to the reader, not to the conceptual graph.
+
+Use ORB File 1, one valid UTF-8 JSON object saved as TOPIC.orb.txt. If your chat cannot create a file, give one complete JSON code block for me to paste into ORB Share. Do not put prose or Markdown fences inside the file. The template below demonstrates the exact supported structure; replace its content with our ORB. Specification: https://visualizationcreation.github.io/orb-share/FORMAT.md
+
+Required root fields: format:"orb", formatVersion:1, id, title (80 characters maximum), summary (400 maximum), creator (60 maximum), edition, entry, points, route. IDs use letters, digits, hyphens, underscores or dots, maximum 80 characters. Use 1–200 points and keep the file under 2 MB. The route is a nonempty ordered list of unique point IDs. Source readings use plain text, with blank lines between paragraphs. Sources are {title,url} with real HTTPS links. Every link is either {to,label} or {reason}; never guess a missing target. Unknown fields are rejected, so retain any unsupported original material separately rather than discarding it.
+
+Optional authorship has modelLabel, modelId, skillVersion: record confirmed values or null. Optional floor has kind (open-question, unresearched or hypothesis), known, question and unknown. A gap in your research is not automatically the frontier of human knowledge.
+
+Optional scripts are text only and must be explicitly requested. Each script has id, title, mode (learn or feel), revision and passages:[{point,text}]. Write connected prose with transitions, an opening and a close, retaining source-point mappings. Learn is an engaging explanatory account. Feel & Experience is a warm second-person guide through a dream of the place: sensory detail, gentle invitations, flowing transitions and an unhurried return. Avoid sustained first-person I-notice narration. Preserve scientific qualifications and cultural attribution; imagined scenes are not invented evidence or testimony. For text-only revisions preserve existing recordings and matching transcripts, and deliver the new script separately as unrecorded. No audio or image generation is required for this file. Keep media-rich editions in their existing HTML/ZIP package.
+
+Before delivering, check that all IDs are unique, the entry and route exist, each compass target exists, every direction has a target or reason, sources support the readings, and unknowns remain visible. Do not claim the preview or submission has happened. I will open the file in ORB Share to check it, then decide whether to submit it.
+
+EXAMPLE STRUCTURE (replace the demonstration with our authored ORB):
+{
+  "format": "orb",
+  "formatVersion": 1,
+  "id": "exploring-an-orb",
+  "title": "Exploring an ORB",
+  "summary": "A five-point introduction to scale, connections, reading routes and honest limits in ORB Share.",
+  "creator": "Informational Dimensions",
+  "edition": "1.0",
+  "authorship": {
+    "modelLabel": "Primary assistant model",
+    "modelId": null,
+    "skillVersion": null
+  },
+  "entry": "start",
+  "points": [
+    {
+      "id": "start",
+      "title": "An exploration you can keep",
+      "reading": "An ORB holds an exploration as connected points. Each point has a reading and a set of named directions. You can stay with one question, widen your view, or follow a connection that changes what you notice.\n\nThis small example explains the reader itself. Its spiral offers a suggested reading sequence; its compass offers conceptual choices. The sequence and the choices do different jobs.",
+      "thread": "From exploration to a saved file",
+      "sources": [
+        {
+          "title": "ORB portable prompt and navigation conventions",
+          "url": "https://visualizationcreation.github.io/orbbasic/"
+        }
+      ],
+      "links": {
+        "up": {
+          "reason": "This is the root of this small demonstration."
+        },
+        "down": {
+          "to": "scale",
+          "label": "Change the scale of the question"
+        },
+        "left": {
+          "reason": "No left destination has been authored for this point."
+        },
+        "right": {
+          "to": "connections",
+          "label": "Follow a meaningful connection"
+        },
+        "forward": {
+          "to": "route",
+          "label": "Read a route through the points"
+        },
+        "backward": {
+          "reason": "No backward destination has been authored for this point."
+        }
+      }
+    },
+    {
+      "id": "scale",
+      "title": "Change the scale of the question",
+      "reading": "UP asks what contains this point or gives it broader context. DOWN asks for a deeper explanation: a mechanism, a component, an assumption, or the evidence behind a claim. Depth does not always mean physical size.\n\nAn author names these destinations deliberately. The reader draws their positions but does not decide what is broader or deeper. If a destination has not been authored, the compass says why.",
+      "thread": "From a question to its supporting basis",
+      "sources": [
+        {
+          "title": "ORB portable prompt and navigation conventions",
+          "url": "https://visualizationcreation.github.io/orbbasic/"
+        }
+      ],
+      "links": {
+        "up": {
+          "to": "start",
+          "label": "An exploration you can keep"
+        },
+        "down": {
+          "to": "limits",
+          "label": "Keep the limits visible"
+        },
+        "left": {
+          "reason": "No left destination has been authored for this point."
+        },
+        "right": {
+          "to": "connections",
+          "label": "Follow a meaningful connection"
+        },
+        "forward": {
+          "reason": "No forward destination has been authored for this point."
+        },
+        "backward": {
+          "reason": "No backward destination has been authored for this point."
+        }
+      }
+    },
+    {
+      "id": "connections",
+      "title": "Follow a meaningful connection",
+      "reading": "LEFT and RIGHT visit adjacent facets at a similar level. FORWARD and BACKWARD follow a named thread, such as a chain of reasoning or a sequence of events. The thread label tells you what kind of relationship to expect.\n\nMoving backward on that thread differs from returning to your last visited point. Use History back for the route you actually took. A chronological sequence alone is not evidence that one event caused another.",
+      "thread": "From authored connections to reader choices",
+      "sources": [
+        {
+          "title": "ORB portable prompt and navigation conventions",
+          "url": "https://visualizationcreation.github.io/orbbasic/"
+        }
+      ],
+      "links": {
+        "up": {
+          "to": "start",
+          "label": "An exploration you can keep"
+        },
+        "down": {
+          "reason": "No down destination has been authored for this point."
+        },
+        "left": {
+          "to": "scale",
+          "label": "Change the scale of the question"
+        },
+        "right": {
+          "reason": "No right destination has been authored for this point."
+        },
+        "forward": {
+          "to": "route",
+          "label": "Read a route through the points"
+        },
+        "backward": {
+          "reason": "No backward destination has been authored for this point."
+        }
+      }
+    },
+    {
+      "id": "route",
+      "title": "Read a route through the points",
+      "reading": "The spiral is an ordered invitation through selected points. Previous and Next on spiral follow that order, even when the next reading is not the conceptual DOWN destination. You can leave the route and choose any point from the list.\n\nAn author can also provide a continuous Learn script or a separate Feel & Experience script. Text is not a recording. This reader keeps scripts visibly unrecorded so that readers know what is actually available.",
+      "thread": "From exploring to sharing",
+      "sources": [
+        {
+          "title": "ORB portable prompt and navigation conventions",
+          "url": "https://visualizationcreation.github.io/orbbasic/"
+        }
+      ],
+      "links": {
+        "up": {
+          "to": "start",
+          "label": "An exploration you can keep"
+        },
+        "down": {
+          "reason": "No down destination has been authored for this point."
+        },
+        "left": {
+          "reason": "No left destination has been authored for this point."
+        },
+        "right": {
+          "reason": "No right destination has been authored for this point."
+        },
+        "forward": {
+          "to": "limits",
+          "label": "Keep the limits visible"
+        },
+        "backward": {
+          "to": "connections",
+          "label": "Follow a meaningful connection"
+        }
+      }
+    },
+    {
+      "id": "limits",
+      "title": "Keep the limits visible",
+      "reading": "A useful ORB records what its evidence supports and what remains unresolved. A missing citation is a gap in the file, not proof that a question is unanswered everywhere. The reader checks the file structure; a person still needs to review the claims and sources.\n\nFor this example, a practical question remains open: does a shared reader help contributors produce better explorations? That would need comparison of real submissions. A reusable layout removes the need to write interface code, but does not by itself establish better reasoning.",
+      "thread": "From a proposal to its evaluation",
+      "sources": [
+        {
+          "title": "ORB portable prompt and navigation conventions",
+          "url": "https://visualizationcreation.github.io/orbbasic/"
+        }
+      ],
+      "links": {
+        "up": {
+          "to": "start",
+          "label": "An exploration you can keep"
+        },
+        "down": {
+          "reason": "No down destination has been authored for this point."
+        },
+        "left": {
+          "reason": "No left destination has been authored for this point."
+        },
+        "right": {
+          "reason": "No right destination has been authored for this point."
+        },
+        "forward": {
+          "reason": "No forward destination has been authored for this point."
+        },
+        "backward": {
+          "to": "route",
+          "label": "Read a route through the points"
+        }
+      },
+      "floor": {
+        "kind": "unresearched",
+        "known": "The shared reader handles layout and navigation for a supported ORB file.",
+        "question": "Does removing interface-authoring work improve the depth and quality of submitted ORBs?",
+        "unknown": "This has not been established by this example. Compare substantive readings, evidence and meaningful connections across real submissions."
+      }
+    }
+  ],
+  "route": [
+    "start",
+    "scale",
+    "connections",
+    "route",
+    "limits"
+  ]
+}

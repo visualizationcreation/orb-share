@@ -24,3 +24,8 @@ Pending issues, attachments and open PRs are not catalogue entries. No ongoing m
 main protection: PR required, one approval, Code Owner review, dismissal of stale approvals, conversation resolution; CODEOWNERS is @visualizationcreation for all paths. Owner administrative maintenance override remains available; outside contributors have no direct write access. Auto-merge stays off. Preserve protections and Pages main/root.
 
 For removal, obtain the owner's instruction, remove the approved listing and verify its next deployment. For a material update, repeat review and approval. Legacy PR listings can be processed with the same explicit approval boundary; contributors should use the simpler issue intake going forward.
+
+
+## ORB File submissions
+
+Accept `.orb.txt`/JSON using ORB File 1 as well as existing links and HTML/ZIP submissions. Use the trusted `orb-file.js` validator and `tool.html` preview from the current tool repository. Structural checks are not factual or rights approval. Preserve the original file hash, stable ORB/point IDs, creator credit, content edition, script revisions and confirmed model/skill metadata. Text-only scripts remain unrecorded; keep existing recordings and matching transcripts intact. After approval, an ORB file can be hosted with the reusable reader and a verified content loader; the current tool itself only opens local files or pasted text and does not publish them automatically.

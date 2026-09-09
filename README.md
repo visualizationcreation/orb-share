@@ -23,3 +23,8 @@ Issues are intake. The root orbs.json remains the approved catalogue, managed by
 Pages publishes main/root with .nojekyll. CODEOWNERS assigns every path to @visualizationcreation. main has required PR, one approval, Code Owner review, stale-approval dismissal and conversation resolution; the owner's administrative maintenance override remains available. Do not weaken these protections or give contributors write access. No automatic issue-to-publishing workflow or ongoing monitor is installed.
 
 Each approved edition retains creator credit and source/media provenance. Review records identify the issue, exact attachment hash or source revision, approval and published destination. A material update needs renewed review. See CONTRIBUTING.md and REVIEWING.md for details.
+
+
+## ORB Share file tool
+
+Open `tool.html` to paste or load ORB File 1, preview its map and authored compass, save it, or prepare the existing submission form. See FORMAT.md and authoring-brief.txt. Input stays in the browser until the contributor manually submits it on GitHub. The reader supports text and unrecorded scripts; existing custom HTML/ZIP and media submissions remain supported. Rebuild the embedded example and brief with `node build-tool.cjs`.

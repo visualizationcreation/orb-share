@@ -19,3 +19,8 @@ The finished ORB needs an anchor, connected readings and stable point IDs, a bro
 The owner decides whether to feature the reviewed version. The assistant can manage files, GitHub hosting, credit and the archive listing after approval. Acceptance is not automatic. Credit and source provenance stay with the edition. The hosting permission applies to the submitted edition; it is not an exclusive transfer of ownership or blanket reuse license. Material revisions require review again. If your live site changes, identify the new version in the thread.
 
 [Submit](https://visualizationcreation.github.io/orb-share/#submit) · [Queue](https://github.com/visualizationcreation/orb-share/issues) · [GitHub attachment help](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)
+
+
+## ORB File submissions
+
+Accept `.orb.txt`/JSON using ORB File 1 as well as existing links and HTML/ZIP submissions. Use the trusted `orb-file.js` validator and `tool.html` preview from the current tool repository. Structural checks are not factual or rights approval. Preserve the original file hash, stable ORB/point IDs, creator credit, content edition, script revisions and confirmed model/skill metadata. Text-only scripts remain unrecorded; keep existing recordings and matching transcripts intact. After approval, an ORB file can be hosted with the reusable reader and a verified content loader; the current tool itself only opens local files or pasted text and does not publish them automatically.

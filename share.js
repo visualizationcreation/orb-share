@@ -15,15 +15,25 @@ form.addEventListener('submit',event=>{
     const title=read('title'),credit=read('credit'),summary=read('summary'),url=read('url'),attach=f.has('attach');
     if(title.length<3||credit.length<1||summary.length<20)throw Error('Add a title, creator credit and a description of at least 20 characters.');
     if(/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(title+credit+summary))throw Error('Please use readable text in your submission.');
-    if(!url&&!attach)throw Error('Provide a link, or choose to attach your HTML/ZIP file on GitHub.');
+    if(!url&&!attach)throw Error('Provide a link, or choose to attach your ORB text/HTML/ZIP file on GitHub.');
     if(url){let u;try{u=new URL(url);}catch{throw Error('Enter a valid public HTTPS link.');}if(u.protocol!=='https:'||u.username||u.password||u.port||['localhost','127.0.0.1','[::1]'].includes(u.hostname))throw Error('Use a public HTTPS link without passwords or local addresses.');}
     if(!['format','rights','public'].every(k=>f.has(k)))throw Error('Please confirm the format, sharing permission and public submission requirements.');
-    const body=['## ORB submission','', '### ORB title',title,'','### Creator credit',credit,'','### Original perspective / audience',summary,'','### ORB link or file',url||'I will attach the HTML/ZIP below before submitting.',attach?'File attachment: please see attached HTML/ZIP.':'','','### Creator confirmations','- [x] I used the ORB Skill or its published ORB prompt and checked the required ORB format.','- [x] I created this contribution or have permission to submit it, and permit ORB Archive to host and feature this submitted edition with creator credit.','- [x] I understand this submission and its attachments are public and featuring requires owner approval.','','---','Intake only. No approval or publication is implied.'].join('\n');
+    const body=['## ORB submission','', '### ORB title',title,'','### Content edition',String(new URLSearchParams(location.search).get('edition')||'Not recorded').slice(0,80),'','### Creator credit',credit,'','### Original perspective / audience',summary,'','### ORB link or file',url||'I will attach the ORB text/HTML/ZIP below before submitting.',attach?'File attachment: please see attached ORB text/HTML/ZIP.':'','','### Creator confirmations','- [x] I used the ORB Skill or its published ORB prompt and checked the required ORB format.','- [x] I created this contribution or have permission to submit it, and permit ORB Archive to host and feature this submitted edition with creator credit.','- [x] I understand this submission and its attachments are public and featuring requires owner approval.','','---','Intake only. No approval or publication is implied.'].join('\n');
     const destination=new URL('https://github.com/visualizationcreation/orb-share/issues/new');destination.searchParams.set('title','ORB submission: '+title);destination.searchParams.set('body',body);
     const longLink=destination.href.length>7000;
     if(longLink)destination.searchParams.delete('body');
     document.getElementById('submission-text').value=body;document.getElementById('github-submit').href=destination.href;
-    document.getElementById('next-step').textContent=(longLink?'Your text is too long for a prefilled link. Open the preview below and copy the submission text, then paste it into the GitHub description. ':'')+(attach?'Attach your HTML or ZIP in the GitHub description box before sending. This page has not uploaded your file.':'Your link and creator details are ready. Open GitHub to review and send them.');
+    document.getElementById('next-step').textContent=(longLink?'Your text is too long for a prefilled link. Open the preview below and copy the submission text, then paste it into the GitHub description. ':'')+(attach?'Attach your saved ORB text file, HTML or ZIP in the GitHub description box before sending. This page has not uploaded your file.':'Your link and creator details are ready. Open GitHub to review and send them.');
     result.hidden=false;result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
   }catch(e){error.textContent=e.message;}
 });
+
+// Prefill descriptive fields only. Permission confirmations always remain unchecked.
+const incoming=new URLSearchParams(location.search);
+for(const [name,max] of [['title',80],['credit',60],['summary',400]]){
+ const value=incoming.get(name);if(value)form.elements.namedItem(name).value=value.slice(0,max);
+}
+if(incoming.has('orbFile')){
+ form.elements.namedItem('attach').checked=true;
+ document.getElementById('file-help').textContent='Attach your saved ORB file on GitHub after reviewing this form. No file has been uploaded. Suggested file: '+incoming.get('orbFile').slice(0,100);
+}
