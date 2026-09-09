@@ -9,9 +9,9 @@ The finished ORB needs an anchor, connected readings and stable point IDs, a bro
 ## Submit a link or file
 
 1. Open [Share this ORB](https://visualizationcreation.github.io/orb-share/#submit).
-2. Enter the title, creator name, brief original perspective and a live/download link. For a local file, select the attachment option. A self-contained HTML is fine; use a ZIP with index.html and required assets for multiple files.
+2. Enter the title, creator name, brief original perspective and a live/download link. For a local file, select the attachment option. The simplest option is a saved `.orb.txt` from [ORB Share](https://visualizationcreation.github.io/orb-share/tool.html). Copy its authoring brief into your AI chat, open the resulting file or paste the JSON, then Save ORB file. Custom HTML/ZIP editions are also accepted.
 3. Confirm that you followed the ORB format, have rights to submit and permit hosting/featuring with credit, and understand that the intake is public. Keep private chats, credentials and private notes out of your files.
-4. Select Prepare my submission, then Continue to GitHub. Sign in, review the prefilled text and drag the HTML/ZIP into the issue description when needed. Wait for the upload to finish, then Create/Submit new issue. HTML/ZIP attachments are limited to 25 MB each; use a public download link for larger packages.
+4. Select Prepare my submission, then Continue to GitHub. Sign in, review the prefilled text and drag the saved `.orb.txt` (or custom HTML/ZIP) into the issue description when needed. Wait for the upload to finish, then Create/Submit new issue. HTML/ZIP attachments are limited to 25 MB each; use a public download link for larger packages.
 5. Keep the resulting issue link as your receipt. The owner reviews on request with an assistant; there is no guaranteed review time. Respond in that thread if changes are requested. You do not need your own GitHub repository, Pages deployment or pull request.
 
 ## After approval

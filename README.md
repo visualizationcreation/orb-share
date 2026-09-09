@@ -8,8 +8,8 @@ Contributors use the ORB Skill as described in the [field guide](https://visuali
 
 ## Simple intake
 
-1. Create and check a finished ORB Web artifact.
-2. On the Share page, enter the title, creator credit, short summary and live/download link; alternatively choose to attach an HTML/ZIP on GitHub.
+1. Explore using the portable ORB prompt. Copy the ORB Share authoring brief into that same chat and ask for an ORB File 1 `.orb.txt`. Open or paste it in [ORB Share](https://visualizationcreation.github.io/orb-share/tool.html), check the readings and compass, then Save ORB file. A custom HTML/ZIP is optional.
+2. On the Share page, enter the title, creator credit, short summary and live/download link; choose to attach your saved `.orb.txt` on GitHub. Existing HTML/ZIP editions remain supported.
 3. Confirm ORB format, permission to host with credit and public submission. Open the prefilled GitHub issue, attach any files, and submit. A GitHub account is required; a repository, hosting, commit SHA, JSON editing and fork are not.
 4. The owner asks their assistant to review the current intake. The assistant prepares file/format/evidence checks and a preview. The owner decides. Only explicit approval of the reviewed edition authorizes publication.
 5. After approval, the assistant handles repository/files, hosting if needed, attribution and the approved archive listing. Submission never automatically features an ORB.
